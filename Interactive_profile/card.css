@@ -1,0 +1,282 @@
+/* From Uiverse.io by arghyaBiswasDev */ 
+/* The switch - the box around the slider */
+body{
+  height: 100%;
+  background: #F0F1FE;
+}
+nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+
+}
+
+
+.ri-sun-line,.ri-moon-fill{
+    display: inline-block;
+    /* border: 2px solid; */
+    /* height: 200px; */
+    font-size: 30px;
+}
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border: 1px solid #adb5bd;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.27em;
+  bottom: 0.25em;
+  background-color: #adb5bd;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+  border: 1px solid #007bff;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.4em);
+  background-color: #fff;
+}
+
+/* From Uiverse.io by adamgiebl */ 
+.card {
+    margin: auto;
+  width: 515px;
+  height: 515px;
+  border-radius: 20px;
+  background: #FFFFFF;
+  box-shadow: 15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff;
+    
+}
+.card img{
+    border-radius: 50%;
+}
+.card {
+    /* width: 85%; */
+    padding-left: 30px;
+    border: 2px solid  #C6D0E0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: column;
+    color: #1F3554;
+}
+
+.card>div{
+  /* padding-top: 30px; */
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap:30px ;
+}
+.card main{
+  display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap:30px ;
+}
+.card>div aside{
+  margin-top: 20px;
+  margin-left: 35px;
+  padding:10px;
+  border-radius: 25px;
+  /* border: 2px solid; */
+  color: #1F3554;
+  font-size: 20px;
+  background-color: #E7F0FB;
+  font-weight: 600;
+}
+.card aside{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+}
+.card aside>button{
+  height: 50px;
+  width: 200px;
+  font-weight: 500;
+  font-size: 20px;
+  color: red;
+  border: none;
+  background-color: #FFFFFF;
+  box-shadow: 5px 5px 10px #adb5bd,
+             -5px -5px  10px #ffffff;
+
+}
+.card aside>button+button{
+  color: #fff;
+  height: 50px;
+  width: 200px;
+  font-weight: 500;
+  font-size: 20px;
+  border: none;
+  background-color:#1F3554;
+  
+  box-shadow: 5px 5px 10px #adb5bd,
+             -5px -5px  10px #ffffff;
+
+}
+.card main p{
+  font-size: 17px;
+}
+
+
+@media (max-width: 768px) {
+
+    .card {
+        width: 90%;
+        height: auto;
+        padding: 25px;
+    }
+
+    .card > div {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .card aside {
+        gap: 20px;
+    }
+
+    .card aside > button {
+        width: 45%;
+    } .card main {
+        gap: 20px;
+    }
+}
+@media (max-width: 480px) {
+
+    nav {
+        padding: 10px 15px;
+        gap: 8px;
+    }
+
+    .ri-sun-line,
+    .ri-moon-fill {
+        font-size: 22px;
+    }
+
+    .card {
+        width: 92%;
+        height: auto;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .card > div {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .card img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .card > div aside {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .card section {
+        width: 100%;
+    }
+
+    .card section h1 {
+        font-size: 24px;
+    }
+
+    .card section p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .card > aside {
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .card aside > button {
+        width: 100%;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .card main {
+        width: 100%;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .card main p {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+}
+.dark-mode {
+    background-color: #172033;
+    color: white;
+}
+
+.dark-mode .card {
+    background-color: #222D42;
+    color: white;
+    border-color: #3A4860;
+    box-shadow: none;
+}
+
+.dark-mode .card p {
+    color: #B7C1D1;
+}
+
+.dark-mode .card aside > button {
+    background-color: #007bff;
+    color: white;
+    box-shadow: none;
+}
+
+.dark-mode .card main p {
+    color: #B7C1D1;
+}
